@@ -8,16 +8,25 @@
   </head>
   <body>
     <a-scene>
+
         <!-- Cámara y luz básica -->
         <a-light type="ambient" color="#888"></a-light>
         <a-light type="directional" position="-1 2 1"></a-light>
-        <a-camera position="0 1.6 0"></a-camera>
+        <a-camera position="0 1.6 0">
+            <a-cursor></a-cursor>
+        </a-camera>
     
-        <!-- Caja simple -->
-        <a-box position="0 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+        <!-- Puerta -->
+        <a-entity id="puerta" position="0 0 -3" rotation="0 0 0" class="clickable">
+          <a-box position="0 0 0" depth="0.1" height="2" width="1" color="#8B4513" class="clickable"></a-box>
+          <a-box position="-0.5 0 0" depth="0.1" height="2" width="0.1" color="#654321" class="bisagra"></a-box>
+        </a-entity>
     
         <!-- Plano como suelo -->
         <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
       </a-scene>
+
+    <!-- Script -->
+    <script src="script.js"></script>
   </body>
 </html>
