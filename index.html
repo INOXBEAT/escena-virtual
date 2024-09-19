@@ -13,6 +13,9 @@
         <a-cursor></a-cursor>
       </a-camera>
 
+      <!-- Luz ambiental -->
+      <a-light type="ambient" intensity="0.3" color="#FFFFFF"></a-light>
+
       <!-- Caja interactiva -->
       <a-entity
         id="caja"
@@ -64,7 +67,11 @@
         light="type: point; intensity: 1; color: #FFF"
         class="clickable"
       >
-        <a-sphere radius="0.2" material="color: #FFD700" position="0 0 0"></a-sphere>
+        <a-sphere
+          radius="0.2"
+          material="color: #FFD700"
+          position="0 0 0"
+        ></a-sphere>
         <!-- Esfera para representar la luz -->
       </a-entity>
     </a-scene>
