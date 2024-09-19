@@ -56,6 +56,17 @@
           color="#654321"
         ></a-box>
       </a-entity>
+
+      <!-- Luz interactiva con esfera visible -->
+      <a-entity
+        id="luz"
+        position="0 3 -3"
+        light="type: point; intensity: 1; color: #FFF"
+        class="clickable"
+      >
+        <a-sphere radius="0.2" material="color: #FFD700" position="0 0 0"></a-sphere>
+        <!-- Esfera para representar la luz -->
+      </a-entity>
     </a-scene>
     <script src="script.js"></script>
   </body>
