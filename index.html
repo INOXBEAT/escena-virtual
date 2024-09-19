@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escena-virtual</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <!-- Cámara y luz básica -->
+        <a-light type="ambient" color="#888"></a-light>
+        <a-light type="directional" position="-1 2 1"></a-light>
+        <a-camera position="0 1.6 0"></a-camera>
+    
+        <!-- Caja simple -->
+        <a-box position="0 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+    
+        <!-- Plano como suelo -->
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
+      </a-scene>
+  </body>
+</html>
