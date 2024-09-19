@@ -9,9 +9,18 @@
   <body>
     <a-scene>
       <!-- Cámara -->
-      <a-camera position="0 1.6 0" wasd-controls="acceleration: 50">
+      <a-camera position="0 1.6 0" wasd-controls look-controls>
         <a-cursor></a-cursor>
       </a-camera>
+
+      <!-- Caja interactiva -->
+      <a-entity
+        id="caja"
+        position="3 0.5 -3"
+        geometry="primitive: box"
+        material="color: #4CC3D9"
+        class="clickable"
+      ></a-entity>
 
       <!-- Un suelo -->
       <a-plane

@@ -1,27 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     const puerta = document.getElementById('puerta');
+    const caja = document.getElementById('caja');
   
     if (puerta) {
-      console.log('Puerta encontrada:', puerta);
-  
       puerta.addEventListener('click', () => {
-        console.log('Puerta clickeada'); // Verifica si el evento de clic está funcionando
-  
-        // Obtener la rotación actual como un objeto
         let currentRotation = puerta.getAttribute('rotation');
-        console.log('Rotación actual:', currentRotation);
-  
-        // Asegúrate de que la rotación se esté obteniendo como objeto
-        if (typeof currentRotation === 'object') {
-          let newYRotation = currentRotation.y + 90;
-          puerta.setAttribute('rotation', {x: 0, y: newYRotation % 360, z: 0});
-          console.log('Nueva rotación aplicada:', newYRotation % 360);
-        } else {
-          console.error('No se pudo obtener la rotación correctamente');
-        }
+        let newYRotation = currentRotation.y + 90;
+        puerta.setAttribute('rotation', {x: 0, y: newYRotation % 360, z: 0});
       });
-    } else {
-      console.error('No se encontró la puerta.');
+    }
+  
+    if (caja) {
+      caja.addEventListener('click', () => {
+        let currentPosition = caja.getAttribute('position');
+        let newXPosition = currentPosition.x + 1;
+        caja.setAttribute('position', {x: newXPosition, y: currentPosition.y, z: currentPosition.z});
+        console.log('Caja movida a:', newXPosition);
+      });
     }
   });
   
